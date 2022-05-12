@@ -1,6 +1,14 @@
 RewriteEngine On
+RewriteBase /
 
-RewriteBase / 
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule (.*) https://brik.by/$1 [L,R=301]
+
+RewriteCond %{THE_REQUEST} //
+RewriteCond %{QUERY_STRING} !http(s|)://
+RewriteRule .* /$0 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
