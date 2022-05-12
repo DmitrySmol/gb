@@ -1,0 +1,179 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  padding-top: 4.5rem;
+  margin-bottom: 50px;
+}
+
+.alert-error {
+  background-color: #ff6600;
+  color: #fff;
+}
+.top {
+  background-color: #333;
+  padding: 5px;
+}
+
+.top-nav {
+  text-decoration: underline;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.top-nav:hover {
+  color: #fff;
+}
+
+.comment-item {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.comment-item-hidden {
+  background-color: #eee;
+}
+.comment-image {
+  padding: 5px;
+  border: 1px solid #ddd;
+  max-height: 240px;
+}
+
+.comment-data p {
+  margin-bottom: 0;
+}
+
+.comment-body p {
+  margin-bottom: 0;
+  word-wrap: break-word;
+}
+.comment-author,
+.comment-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+.form-comment .form-label {
+  color: #999;
+}
+.form-comment textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-comment-edit textarea {
+  resize: none;
+  height: 250px;
+}
+
+.form-comment-edit button.btn {
+  max-width: 200px;
+  margin: auto;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+
+.upload {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.upload > input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.upload > label {
+  border: 1px solid rgba(0,0,0,.15);
+  width: 100%;
+  border-radius: 0.25rem;
+  height: 38px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.upload > label > span {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  color: #464a4c;
+}
+
+.upload > label #filename {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.upload > label #filelabel {
+  background-color: #edeeef;
+  margin: 0;
+  border: 1px solid rgba(0,0,0,.15);
+  float: right;
+  cursor: pointer;
+}
+.upload > label #fileclear{
+  background-color: #edeeef;
+  margin: 0;
+  border: 1px solid rgba(0,0,0,.15);
+  float: right;
+  display: none;
+  cursor: pointer;
+}
+
+.thumbnail {
+  display: inline-block;
+  margin-top: 10px;
+}
+.thumbnail img {
+  border: 1px solid #ccc;
+  max-width: 160px;
+}
