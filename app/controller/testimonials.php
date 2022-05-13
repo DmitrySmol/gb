@@ -21,10 +21,10 @@ class Testimonials extends Controller
         if ( isset($_POST)  && !empty($_POST) ) {
             $sort = ['created_at', 'username', 'phone', 'email'];
             $sorby = 'created_at';
-            if(isset($_POST['sort'])) {
+            if(isset($_POST['sort']) && isset($sort[$_POST['sort']])) {
                 $sorby = $sort[$_POST['sort']];
             }
-            error_log($sorby);
+            //error_log($sorby);
             $this->data['testimonials'] = $this->testimonialsModel->getAll($sorby);
             $data['sortview'] = $this->render('sortlist', $this->data);;
             echo json_encode($data);
