@@ -18,10 +18,14 @@ class Testimonials extends Controller
 
     public function sort()
     {
-        $this->data['testimonials'] = $this->testimonialsModel->getAll($_POST['sort']);
-        //$this->view('index', $this->data);
-        $data['sortview'] = $this->render('sortlist', $this->data);;
-        echo json_encode($data);
+        if ( isset($_POST)  && !empty($_POST) ) {
+            $this->data['testimonials'] = $this->testimonialsModel->getAll($_POST['sort']);
+            //$this->view('index', $this->data);
+            $data['sortview'] = $this->render('sortlist', $this->data);;
+            echo json_encode($data);
+        } else {
+            $this->show404();
+        }
     }
 
     public function preview()
@@ -52,7 +56,6 @@ class Testimonials extends Controller
                 }
             }
             unset($_POST['pictureTmp']);
-            $_POST['phone'] = '+(375) ' . $_POST['phone'];
             $id = $this->testimonialsModel->add($_POST);
 			if ( $id ) {
 				$_SESSION['message'] = 'Ваш комментарий добавлен и будет опубликован после проверки.';

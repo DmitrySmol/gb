@@ -23,6 +23,7 @@ class Testimonial extends Model
 	{
 		$data = cleanData($data);
 
+        $data['phone'] = '+(375) ' . $data['phone'];
 		$data['published'] = 0;
 		$now = date('Y-m-d H:i:s');
 		$data['created_at'] = $now;
