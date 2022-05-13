@@ -19,8 +19,13 @@ class Testimonials extends Controller
     public function sort()
     {
         if ( isset($_POST)  && !empty($_POST) ) {
-            $this->data['testimonials'] = $this->testimonialsModel->getAll($_POST['sort']);
-            //$this->view('index', $this->data);
+            $sort = ['created_at', 'username', 'phone', 'email'];
+            $sorby = 'created_at';
+            if(isset($_POST['sort'])) {
+                $sorby = $sort[$_POST['sort']];
+            }
+            error_log($sorby);
+            $this->data['testimonials'] = $this->testimonialsModel->getAll($sorby);
             $data['sortview'] = $this->render('sortlist', $this->data);;
             echo json_encode($data);
         } else {

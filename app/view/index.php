@@ -26,10 +26,10 @@
                     <span class="input-group-text">Показать</span>
                 </div>
                 <select id="sort" class="form-control ">
-                    <option selected value="created_at">По дате</option>
-                    <option value="username">По имени</option>
-                    <option value="phone">По телефону</option>
-                    <option value="email">По email</option>
+                    <option selected value="0">По дате</option>
+                    <option value="1">По имени</option>
+                    <option value="2">По телефону</option>
+                    <option value="3">По email</option>
                 </select>
             </div>
         </div>
