@@ -17,7 +17,7 @@ class Route
 				$this->controller = $url[0];
 				unset($url[0]);
 			} else {
-				$this->controller = 'Errors';
+				$this->controller = 'errors';
 			}		
 		}
 
